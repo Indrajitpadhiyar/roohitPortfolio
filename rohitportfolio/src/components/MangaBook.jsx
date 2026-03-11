@@ -171,7 +171,7 @@ const MangaBook = ({ isOpen, onClose, panels, initialPage, panelsImg }) => {
                                         onClick={onClose}
                                         className="mt-12 px-8 py-3 bg-black text-white font-bold uppercase tracking-widest hover:bg-purple-600 transition-colors"
                                     >
-                                        Close Manga
+                                        Close Story
                                     </button>
                                 </div>
                             </Page>
