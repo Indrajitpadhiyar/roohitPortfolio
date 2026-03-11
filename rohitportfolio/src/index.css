@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "Fira Code", monospace;
+  --font-manga: "Outfit", sans-serif;
+  /* Fallback for bold/italic manga style */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body,
+  a,
+  button {
+    cursor: none !important;
+  }
+}
+
+/* Custom Manga Style Utilities */
+.manga-border {
+  border: 4px solid black;
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.manga-border-hover:hover {
+  box-shadow: 15px 15px 0px 0px rgba(124, 58, 237, 1);
+  transform: translate(-4px, -4px);
+}
+
+/* Sketch to Color Filter */
+.sketch-effect {
+  filter: grayscale(1) contrast(1.2);
+  transition: filter 0.5s ease;
+}
+
+.sketch-effect:hover {
+  filter: grayscale(0) contrast(1);
+}
+
+/* Halftone Pattern Overlay */
+.halftone {
+  background-image: radial-gradient(circle, #000 1px, transparent 1px);
+  background-size: 8px 8px;
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+/* Custom Typography for Anime Feel */
+h1,
+h2,
+h3 {
+  font-family: var(--font-manga);
+  text-transform: uppercase;
+  font-style: italic;
+}
